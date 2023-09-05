@@ -1,0 +1,546 @@
+@font-face {
+    font-family: 'ZFPrometo-Medium';
+    src: url('fonts/ZFPrometo-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ZFPrometo-Light';
+    src: url('fonts/ZFPrometo-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.prometo-medium {
+    font-family: ZFPrometo-Medium;
+}
+.prometo-light {
+    font-family: ZFPrometo-Light;
+}
+
+/*GENERIC*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ZFPrometo-Medium, ZFPrometo-Light, Arial, sans-serif;
+    color: #1179bf;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:link, a:visited {
+    text-decoration: none !important;
+}
+
+div {
+    display: block;
+}
+.wrapper-content {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+span{
+    background: transparent;
+}
+
+/*HEADER*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0070B4;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.header-wrapper {
+    width: 100%;
+}
+
+.header .header-top {
+    border-bottom: solid 1px #bfeaf9;
+}
+
+.header .header-top .header-top-content-wrapper {
+    width: 90%; /* Make sure the wrapper takes the full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header-label{
+    color: #1179bf;
+    padding-left: 20px;
+    user-select: none;
+    font-size: 30px;
+}
+
+.header-top-item .header-top-input-item {
+    display: flex;
+    align-items: center;
+}
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    margin-right: 5px;
+    display: none; /* Starts hidden */
+}
+.search-input.show {
+    display: block;
+}
+.header-search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    color: #1179bf;
+}
+.header-label {
+    line-height: 1;
+    font-size: 2em;
+    margin-right: 20px;
+    
+}
+
+.header-burger-menu img {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width: 992px){
+    
+}
+@media screen and (max-width: 450px){
+    .header-label {
+        font-size: 1.5em;
+        
+    }
+    .header-logo {
+        width: 60px;
+    }
+}
+
+
+
+/*CONTENT*/
+
+#animation-container {
+    position: relative; /* O puedes usar 'absolute' si necesitas más control */
+    width: 100%;
+    height: 627px;
+   /* margin: 0 40%; /* Centra el div horizontalmente */
+}
+
+.middle-animation {
+    position: relative;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos hijo */
+}
+
+.content-label {
+    font-size: 4em; /* Incrementa el tamaño del subtítulo */
+    width: 30%;
+    margin-right: 10%; /* Añade espacio entre el subtítulo y la animación */
+    margin-left: 20%;
+    margin-top: 45px;
+    font-weight: bold; /* Hace que el subtítulo se vea más "fuerte" */
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
+.content-label h2 {
+    font-size: 50px;
+}
+
+.content-label span {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 992px){
+    
+}
+@media screen and (max-width: 450px){
+    .content-label {
+        font-size: 2em;
+        
+    }
+}
+
+/* CONTENT */
+
+#animation-container {
+    position: relative; /* O puedes usar 'absolute' si necesitas más control */
+    width: 100%;
+    height: 627px; /* Puedes cambiar esto para que sea más adaptable */
+}
+
+.middle-animation {
+    position: relative;
+    display: flex;
+    flex-direction: row; /* En una línea horizontal */
+    align-items: center; /* Centra verticalmente los elementos hijo */
+    justify-content: center; /* Centra horizontalmente los elementos hijo */
+}
+
+.content-label {
+    font-size: 4em; 
+    width: 50%; 
+    margin-right: 10%; 
+    margin-left: 10%;
+    margin-top: 45px;
+    font-weight: bold; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.content-label h2 {
+    font-size: 50px;
+}
+
+.content-label span {
+    font-size: 30px;
+}
+
+.content-label {
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+}
+
+/* Para pantallas medianas */
+@media screen and (max-width: 992px){
+    .content-label {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+}
+
+/* Para dispositivos móviles */
+@media screen and (max-width: 450px){
+    .content-label {
+        padding-top: 100px;
+        font-size: 40px; /* Disminuye el tamaño de la fuente */
+        margin-right: 2%; /* Disminuye los márgenes */
+        margin-left: 2%;
+        text-align: center; /* Centra el texto */
+    }
+    #animation-container {
+        width: 90%;
+        max-width: 380px;
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+    .middle-animation {
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+    }
+}
+
+
+
+/*Division*/
+
+.division {
+    background: transparent;
+}
+
+h1 {
+    margin: 50px auto;
+    text-align: center;
+    font-size: 30px;
+    max-width: 80%;
+    position: relative;
+}
+
+h1::before {
+    content: "";
+    display: block;
+    width: 35%;
+    height: 2px;
+    background: #bfeaf9;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -2;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 35%;
+    height: 2px;
+    background: #bfeaf9;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -2;
+}
+
+
+
+/*Parts Description*/
+.description {
+    padding: 2rem 0;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    background: transparent;
+    display: grid; /* Esto hará que los hijos de first-description se muestren en línea */
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center; /* Alinea los elementos hijos verticalmente en el centro */
+    justify-content: space-between; /* Crea un espacio entre la imagen y el texto */
+    column-gap: 10px;
+}
+
+.description-left {
+    padding: 30px;
+}
+
+.description-right {
+    padding: 20px;
+}
+
+
+.image-container img {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover-container{
+    display: flex;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.hover-container div{
+    width: 50px;
+    height: 40px;
+    border: 2px solid #bfeaf9;
+    padding: 1rem;
+    border-radius: 3px;
+    margin: 0 4px 8px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer;
+}
+
+.activate {
+    border-color: #1179bf!important;
+}
+
+.hover-container div:hover {
+    border-color: #1179bf!important;
+}
+
+.hover-container div img{
+    width: 50px;
+    cursor: pointer;
+
+}
+
+@media screen and (max-width: 992px){
+    .first-description{
+        grid-template-columns: 100%;
+    }
+    .first-description-right {
+        text-align: center;
+    }
+    .image-container img{
+        width: 320px;
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width: 450px){
+    .description {
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+        grid-template-columns: 100%;
+    }
+
+    .description-right{
+        text-align: center;
+    }
+
+    .pcb-description {
+        text-align: center;
+    }
+}
+
+
+
+/*Parts Description Right*/
+.pcb-description {
+    position: relative;
+    flex: 1; /* Toma todo el espacio disponible después de que se coloca la imagen */
+    padding-left: 20px; /* Espacio entre la imagen y la descripción */
+    text-align: right;
+}
+
+@media screen and (max-width: 992px){
+    
+}
+@media screen and (max-width: 450px){
+    .pcb-description {
+        text-align: center;
+    }
+}
+
+/*FOOTER*/
+#facebook {
+    width: 14px; 
+    padding-left: 20px;
+    padding-right: 10px;
+}
+#instagram {
+    width: 22px; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#linkedin {
+    width: 22px; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#youtube {
+    width: 28px; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer {
+    background-color: #001024;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 14px;
+    float: left;
+    
+}
+
+.footer * {
+    color: #FFFFFF;
+}
+
+.footer-content {
+    width: 90%;
+}
+
+.footer-top-content, .footer-middle-content, .footer-bottom-content {
+    position: relative;
+}
+
+.footer-top {
+    line-height: 52px;
+    text-align: center;
+}
+
+.footer-top-content {
+    padding: 14px 0;
+}
+
+.social-block {
+    width: 100%;
+    padding-left: 1.36752%;
+    padding-right: 1.36752%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+}
+
+.social-label {
+    font-size: 18px;
+}
+
+.social-label, .social-icons {
+    float: left;
+}
+
+.separator {
+    margin-top: 0;
+    height: unset;
+    position: absolute;
+    bottom: 0;
+}
+
+.color-black, .color-inherit {
+    color: #000000;
+}
+.prometo-light, .prometo-medium {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+.prometo-medium {
+    font-family: 'ZFPrometo-Medium', sans-serif;
+    font-weight: 500;
+}
+
+.footer-bottom {
+    line-height: 52px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    float: left;
+    column-gap: 30px;
+}
+
+.footer-menu-item {
+    font-family: ZFPrometo-Light;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.footer-menu-item {
+    padding: 3px 0;
+    margin-right: 30px;
+}
+
+.footer-copyright {
+    font-size: 18px;
+    line-height: 30px;
+    float: right;
+}
+
+@media screen and (max-width: 992px){
+    
+}
+@media screen and (max-width: 450px){
+    .footer-menu  a{
+        font-size: 17px;
+    }
+
+    .footer-copyright span {
+        font-size: 18px;
+    }
+
+    .footer-menu-item {
+        padding: 0;
+        margin-right: 0;
+    }
+}

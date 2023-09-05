@@ -1,0 +1,379 @@
+@font-face {
+    font-family: 'ZFPrometo-Medium';
+    src: url('fonts/ZFPrometo-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ZFPrometo-Light';
+    src: url('fonts/ZFPrometo-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.prometo-medium {
+    font-family: ZFPrometo-Medium;
+}
+.prometo-light {
+    font-family: ZFPrometo-Light;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ZFPrometo-Medium, ZFPrometo-Light, Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0070B4;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.header-wrapper {
+    width: 100%;
+}
+
+.header .header-wrapper, .header {
+    /*position: static;*/
+    z-index: 2;
+}
+
+.wrapper-content {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    
+}
+
+.header .header-white .header-top {
+    background: white;
+}
+
+.header .header-top {
+    padding-top: 10px;
+    border-bottom: solid 1px #bfeaf9;
+}
+
+.header .header-top .header-top-content-wrapper {
+    width: 100%; /* Make sure the wrapper takes the full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .brand-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header .header-top .header-label {
+    color: #1179bf;
+}
+
+.header-label {
+    padding-left: 20px;
+    user-select: none;
+    font-size: 15px;
+
+}
+
+.header-top-item .header-top-input-item {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    margin-right: 5px;
+    display: none; /* Starts hidden */
+}
+.search-input.show {
+    display: block;
+}
+
+
+.header-search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+.header-label {
+    line-height: 1;
+    margin-right: 20px;
+    
+}
+
+.header img {
+    height: 70px;
+    margin-left: 60px;
+}
+
+#menu_left {
+    display: flex;
+    align-items: center;
+    font-family: ZFPrometo-Light;
+}
+
+/* Ajusta el tamaño de la imagen de la hamburguesa */
+.header-burger-menu img {
+    width: 20px;
+    height: 20px;
+}
+
+#menu_right {
+    display: flex;
+    font-family: ZFPrometo-Light;
+    font-size: 25px;
+    margin-right: 30px;
+    color: #0070B4;
+    cursor: pointer;
+}
+
+#menu_right img {
+    width: 30px; /* Ajusta este valor según el tamaño deseado */
+    height: 30px; /* Ajusta este valor según el tamaño deseado */
+    margin-right: 8px;
+    fill: #0070B4; /* Este valor establecerá el color del icono SVG */
+    cursor: pointer;
+}
+
+#menu_right img:hover {
+    fill: #0070B4; /* Este valor establecerá el color del icono SVG en hover */
+}
+
+.division {
+    height: 1.5px;
+    background-color: #BFEAF9;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    color: #0070B4;
+}
+
+#menu {
+    padding-right: 20px;
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+#animation-container {
+    position: relative;
+  }
+  
+
+#facebook {
+    width: 14px; 
+    padding-left: 20px;
+    padding-right: 10px;
+}
+#instagram {
+    width: 22px; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#linkedin {
+    width: 22px; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#youtube {
+    width: 28px; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:link, a:visited {
+    text-decoration: none !important;
+}
+
+div {
+    display: block;
+}
+
+.footer {
+    background-color: #001024;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 14px;
+    float: left;
+    
+}
+
+.footer * {
+    color: #FFFFFF;
+}
+
+.footer-top-content, .footer-middle-content, .footer-bottom-content {
+    position: relative;
+}
+
+.footer-top {
+    line-height: 52px;
+    text-align: center;
+}
+
+.footer-top-content {
+    padding: 14px 0;
+}
+
+.social-block {
+    width: 75%;
+    padding-left: 1.36752%;
+    padding-right: 1.36752%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+}
+
+.social-label {
+    font-size: 18px;
+}
+
+.social-label, .social-icons {
+    float: left;
+}
+
+.footer .separator {
+    margin-top: 0;
+    height: unset;
+    position: absolute;
+    bottom: 0;
+}
+
+.zfc-dotted-line {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-transform: uppercase;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 32px;
+    font-family: var(--default-font);
+    font-weight: 500;
+}
+
+.color-black, .color-inherit {
+    color: #000000;
+}
+.prometo-light, .prometo-medium {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+.prometo-medium {
+    font-family: 'ZFPrometo-Medium', sans-serif;
+    font-weight: 500;
+}
+.zfc-dotted-no-title.zfc-dotted-line:after, .zfc-dotted-no-title.zfc-dotted-line:before {
+    background: url(/master/media/toolbox/ui_1/separators/zfc_ui_pattern_dots_grey_small.svg) center repeat-x;
+}
+.zfc-dotted-line:after, .zfc-dotted-line:before {
+    background: url(/master/media/toolbox/ui_1/separators/zfc_ui_pattern_dots_grey.svg) center repeat-x;
+}
+.zfc-dotted-line:after, .zfc-dotted-line:before {
+    content: '';
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: block;
+    height: 10px;
+    min-width: 36px;
+}
+
+.footer-bottom {
+    line-height: 52px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    float: left;
+    column-gap: 30px;
+}
+
+.footer-menu-item {
+    font-family: ZFPrometo-Light;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.footer-menu-item {
+    padding: 3px 0;
+    margin-right: 30px;
+}
+
+.footer-copyright {
+    font-size: 18px;
+    line-height: 30px;
+    float: right;
+}
+
+@media (min-width: 960px){
+    .header .header-brand-wrapper .header-label {
+        font-size: 20px;
+    }
+}
+
+
+/* Estilo responsivo para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu_left {
+        font-size: 14px; /* Reducir la fuente en dispositivos más pequeños */
+    }
+
+    #menu_right {
+        font-size: 20px; /* Reducir la fuente en dispositivos más pequeños */
+    }
+
+    .header img {
+        height: 50px; /* Reducir la altura del logo en dispositivos más pequeños */
+        margin-left: 20px; /* Reducir el margen izquierdo en dispositivos más pequeños */
+    }
+
+    #menu_right img {
+        width: 20px; /* Ajusta este valor según el tamaño deseado */
+        height: 20px; /* Ajusta este valor según el tamaño deseado */
+        margin-right: 6px;
+        fill: #0070B4; /* Este valor establecerá el color del icono SVG */
+        cursor: pointer;
+    }
+}

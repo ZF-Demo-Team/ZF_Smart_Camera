@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--favicon -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="../site.webmanifest">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "../libs/three140/build/three.module.js"
+              }
+            }
+        </script>
+
+        <title>SMART CAM 4.8</title>
+        <link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+
+        <div class="header">
+            <div class="header-wrapper">
+                <div class="header-top">
+                    <div class="wrapper-content header-top-content-wrapper">
+                        <div class="brand-wrapper">
+                            <div class="header-logo">
+                                <a href="https://www.zf.com/products/en/cars/home/cars.html">
+                                    <img class="header-brand-logo-desktop" alt="ZF Logo" src="https://www.zf.com/master/media/toolbox/assets/img/ZF_logo_blue.svg">
+                                    <!--<img class="header-brand-logo-mobile" alt="ZF Logo" src="https://www.zf.com/master/media/toolbox/assets/img/ZF_logo_blue.svg">-->
+                                </a>
+                            </div>
+                            <div class="header-label">
+                                <span class="prometo-light">SMART CAM 4.8</span>
+                            </div>
+                        </div>
+
+                        <div class="header-top-items-wrapper">
+                            <div class="header-top-item header-top-input-item">
+                                <input type="text" class="search-input" placeholder="Buscar...">
+                                <button class="icon header-top-item-link-icon header-search-button" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="header-burger-menu">
+                            <div><img src="./icons/bars-icon.png" alt="bars"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="division"></div>
+        </div>
+        
+        <!-- Remove this when import maps will be widely supported -->
+        
+		<!-- <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script> -->
+        
+        <script type="module">
+            import { App } from './app.js';
+
+            document.addEventListener("DOMContentLoaded", function(){
+                const app = new App();
+                window.app = app;
+            });
+        </script>
+
+        <div id="animation-container" >
+            <!-- La animación se renderizará aquí -->
+        </div>
+
+        <div class="footer">
+            <div class="footer-content wrapper-content">
+                <div class="footer-top">
+                    <div class="footer-top-content">
+                        <div class="row">
+                            <div class="social-block">
+                                <div class="social-label prometo-light">
+                                    <span>Follow ZF :</span>
+                                </div>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com/zfgroup.global"><img src="./icons/facebook-f.svg" alt="facebook icon ZF" id="facebook"></a>
+                                <a href="https://www.instagram.com/zf_group/"><img src="./icons/instagram.svg" alt="instagram icon ZF" id="instagram"></a>
+                                <a href="https://www.linkedin.com/company/3745"><img src="./icons/linkedin.svg" alt="linkedin icon ZF" id="linkedin"></a>
+                                <a href="https://www.youtube.com/user/zffriedrichshafenag"><img src="./icons/youtube.svg" alt="youtube icon ZF" id="youtube"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="separator">
+                        <span class="zfc-dotted-line zfcui-prometo-medium zfc-dotted-no-title zfc-dotted-line-grey-small zfcui-color-inherit"></span>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <div class="footer-middle-content">
+                        <div class="row"></div>
+                    </div>
+                    <div class="separator">
+                        <span class="zfc-dotted-line zfcui-prometo-medium zfc-dotted-no-title zfc-dotted-line-grey-small zfcui-color-inherit"></span>
+                    </div>
+                </div>
+                <div class="footer-bottom"><span class="zfc-dotted-line zfcui-prometo-medium zfc-dotted-no-title zfc-dotted-line-grey-small zfcui-color-inherit"></span>
+                    <div class="footer-bottom-content prometo-medium">
+                        <div class="footer-menu">
+                            <a href="https://www.zf.com/mobile/en/homepage/homepage.html" class="footer-menu-item" target="_blank">zf.com</a>
+                            <a href="https://www.zf.com/site/meta/es/imprint.html" class="footer-menu-item" target="_blank">Imprint</a>
+                            <a href="https://www.zf.com/site/meta/es/data_protection.html" class="footer-menu-item" target="_blank">Data protection</a>
+                        </div>
+                        <div class="footer-copyright">
+                            <span>© ZF Friedrichshafen AG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+    <script>
+        document.querySelector('.header-search-button').addEventListener('click', function() {
+            var input = document.querySelector('.search-input');
+            input.classList.toggle('show'); // Alterna la visibilidad del campo de búsqueda
+        });
+    </script>
+    
+</html>
