@@ -61,7 +61,7 @@ span{
     background: #fff;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 5;
 }
 
 .header-wrapper {
@@ -139,64 +139,6 @@ span{
     }
 }
 
-
-
-/*CONTENT*/
-
-#animation-container {
-    position: relative; /* O puedes usar 'absolute' si necesitas más control */
-    width: 100%;
-    height: 627px;
-   /* margin: 0 40%; /* Centra el div horizontalmente */
-}
-
-.middle-animation {
-    position: relative;
-    display: flex;
-    align-items: center; /* Centra verticalmente los elementos hijo */
-}
-
-.content-label {
-    font-size: 4em; /* Incrementa el tamaño del subtítulo */
-    width: 30%;
-    margin-right: 10%; /* Añade espacio entre el subtítulo y la animación */
-    margin-left: 20%;
-    margin-top: 45px;
-    font-weight: bold; /* Hace que el subtítulo se vea más "fuerte" */
-    display: flex;
-    align-items: center;
-    text-align: right;
-}
-
-.content-label h2 {
-    font-size: 50px;
-}
-
-.content-label span {
-    font-size: 30px;
-}
-
-.drag-icon {
-    position: absolute;
-    bottom: 0;
-    left: 80;
-    z-index: 999;  /* Asegurarse de que se superpone a otros elementos si es necesario */
-}
-
-.drag-icon img {
-    width: 80px;
-}
-
-@media screen and (max-width: 992px){
-    
-}
-@media screen and (max-width: 450px){
-    .content-label {
-        font-size: 2em;
-        
-    }
-}
-
 /* CONTENT */
 
 #animation-container {
@@ -237,6 +179,39 @@ span{
     flex-direction: column; /* Los elementos se apilan verticalmente */
 }
 
+.drag-icon {
+    position: absolute;
+    bottom: 0;
+    left: 80;
+    z-index: 999;  /* Asegurarse de que se superpone a otros elementos si es necesario */
+}
+
+.drag-icon img {
+    width: 60px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.2); /* Puedes ajustar el color y la opacidad como prefieras */
+    backdrop-filter: blur(3px); /* Este es el efecto de desenfoque */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4; /* Asegurarse de que se muestre por encima de la animación */
+}
+
+.drag-icon img {
+    width: 60px; 
+    margin: 0;
+    padding: 0;
+    display: block;
+    z-index: 6;
+}
+
 /* Para pantallas medianas */
 @media screen and (max-width: 992px){
     .content-label {
@@ -245,7 +220,7 @@ span{
     }
 }
 
-/* Para dispositivos móviles */
+/* Para dispositivos 450px */
 @media screen and (max-width: 450px){
     .content-label {
         padding-top: 100px;
@@ -255,8 +230,27 @@ span{
         text-align: center; /* Centra el texto */
     }
     #animation-container {
-        width: 90%;
-        max-width: 380px;
+        width: 90vw;
+        height: 30vh;        
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+    .middle-animation {
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+    }
+}
+
+/* Para dispositivos 400px */
+@media screen and (max-width: 400px){
+    .content-label {
+        padding-top: 100px;
+        font-size: 40px; /* Disminuye el tamaño de la fuente */
+        margin-right: 2%; /* Disminuye los márgenes */
+        margin-left: 2%;
+        text-align: center; /* Centra el texto */
+    }
+    #animation-container {
+        width: 90vw;
+        height: 30vh;        
         height: auto; /* Ajusta la altura automáticamente */
     }
     .middle-animation {

@@ -12,6 +12,12 @@ class App {
 		//document.body.appendChild( container );
 
         const container = document.getElementById('animation-container');
+        const animationContainer = document.getElementById('animation-container');
+        const overlay = document.querySelector('.overlay');
+
+        animationContainer.addEventListener('mousedown', function() {
+            overlay.style.display = 'none';
+        });
         
         this.pause = false;
         this.moveOut = true; // Flag para determinar la dirección del movimiento
@@ -92,16 +98,33 @@ class App {
 
     }
 
+    /*
     setupCamera(){
         this.camera.fov = 75;
         this.camera.updateProjectionMatrix();
-        this.camera.position.set( 0.05, 0.005, 0.2 );
+        this.camera.position.set( 0.05, 0.005, 0.28 );
     }
+    */
+    setupCamera(){
+        this.camera.fov = 75;
+    
+        // Adaptar la posición de la cámara según el tamaño de la ventana
+        if (window.innerWidth > window.innerHeight) {
+            // Si la ventana es más ancha que alta
+            this.camera.position.set( 0.05, 0.005, 0.2 ); // Mover la cámara hacia atrás
+        } else {
+            // Si la ventana es más alta que ancha
+            this.camera.position.set( 0.05, 0.005, 0.28 ); // Mover la cámara más cerca
+        }
+    
+        this.camera.updateProjectionMatrix();
+    }
+    
     
     setupOrbitCont(){
         // Restricciones de zoom
         this.controls.minDistance = 0.1;    // Mínima distancia de zoom (por ejemplo, 5 unidades)
-        this.controls.maxDistance = 0.21;   // Máxima distancia de zoom (por ejemplo, 50 unidades)
+        this.controls.maxDistance = 0.28;   // Máxima distancia de zoom (por ejemplo, 50 unidades)
 
         // Restricciones verticales (para evitar que la cámara vaya completamente arriba o abajo)
         this.controls.minPolarAngle = THREE.Math.degToRad(50); // Min angle (20 grados)
@@ -150,36 +173,6 @@ class App {
             // ... y así sucesivamente para otras piezas
         }
     }
-    
-    
-    /*
-    onMouseClick(event) {
-        event.preventDefault();
-    
-        for (let i = 0; i < offsets.length; i++) {
-            let offset = this.offsets[i];
-            this.mouse.x = ((event.clientX / window.innerWidth) * 2 - 1) + offset[0];
-            this.mouse.y = (-(event.clientY / window.innerHeight) * 2 + 1) + offset[1];
-    
-            this.raycaster.setFromCamera(this.mouse, this.camera);
-    
-            const intersects = this.raycaster.intersectObjects(this.pieces);
-    
-            if (intersects.length > 0) {
-                for (let i = 0; i < intersects.length; i++) {
-                    if (intersects[i].object === this.pieces[0]) {
-                        document.getElementById("section1").scrollIntoView();
-                        return; // Salir del bucle y de la función
-                    } else if (intersects[i].object === this.pieces[2]) {
-                        document.getElementById("section2").scrollIntoView();
-                        return;// Salir del bucle y de la función
-                    } 
-                    // ... y así sucesivamente para otras piezas
-                }
-            }
-        }
-    }
-    */
     
     
     loadGLTF(){
@@ -287,12 +280,21 @@ class App {
         });
     }   
 
+    /*
     resize(){
         const container = document.getElementById('animation-container');
         this.camera.aspect = window.innerWidth / window.innerHeight;
         this.camera.updateProjectionMatrix();
         this.renderer.setSize( window.innerWidth, window.innerHeight );  
     }
+    */
+    resize(){
+        const container = document.getElementById('animation-container');
+        this.camera.aspect = container.offsetWidth / container.offsetHeight;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(container.offsetWidth, container.offsetHeight);
+    }
+    
     
     /*
     pieces[0] -> case
