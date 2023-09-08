@@ -3,13 +3,10 @@ import { OrbitControls } from '../libs/three140/examples/jsm/controls/OrbitContr
 import { GLTFLoader } from '../libs/three140/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from '../libs/three140/examples/jsm/loaders/DRACOLoader.js';
 import { RGBELoader } from '../libs/three140/examples/jsm/loaders/RGBELoader.js';
-import { LoadingBar } from '../libs/LoadingBar.js';
+import { LoadingGIF } from '../libs/LoadingGIF.js';
 
 class App {
 	constructor(){
-        
-		//const container = document.createElement( 'div' );
-		//document.body.appendChild( container );
 
         const container = document.getElementById('animation-container');
         const animationContainer = document.getElementById('animation-container');
@@ -32,10 +29,6 @@ class App {
 		const ambient = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 0.5);
 		this.scene.add(ambient);
         
-        //const light = new THREE.DirectionalLight( 0xFFFFFF, 1.5 );
-        //light.position.set( 0.2, 1, 1);
-        //this.scene.add(light);
-
         this.setupLight(this.scene);
 			
 		this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true } );
@@ -52,7 +45,8 @@ class App {
         this.transitionTime = 0;
 
         //Add code here to code-along with the video
-        this.loadingBar = new LoadingBar();
+        this.loadingBar = new LoadingGIF();
+        this.loadingBar.setGifSize(150, 150);  // Cambia el tamaño del GIF a 200x200 píxeles
         this.loadGLTF2();
 
         this.controls = new OrbitControls( this.camera, this.renderer.domElement );
@@ -63,12 +57,6 @@ class App {
         this.raycaster = new THREE.Raycaster();
         this.mouse = new THREE.Vector2();
         container.addEventListener('click', this.onMouseClick.bind(this));
-
-        this.offsets = [
-            [0, 0], 
-            [0.01, 0], [0, 0.01], [-0.01, 0], [0, -0.01],  // arriba, abajo, izquierda, derecha
-            [0.01, 0.01], [-0.01, -0.01], [0.01, -0.01], [-0.01, 0.01]  // diagonales
-          ];
 
         this.renderer.setAnimationLoop(this.render.bind(this));
         window.addEventListener('resize', this.resize.bind(this));
@@ -99,12 +87,15 @@ class App {
     }
 
     /*
+    //Static Camera
     setupCamera(){
         this.camera.fov = 75;
         this.camera.updateProjectionMatrix();
         this.camera.position.set( 0.05, 0.005, 0.28 );
     }
     */
+    
+    // Dinamic Camera
     setupCamera(){
         this.camera.fov = 75;
     
