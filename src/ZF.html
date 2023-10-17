@@ -136,8 +136,9 @@
                             <div class="header-top-item header-top-input-item">
                                 <input type="text" class="search-input" placeholder="Buscar...">
                                 <button class="icon header-top-item-link-icon header-search-button" type="button"><i class="fas fa-search"></i></button>
+                                <div class="header-search-exit"><i class="fas fa-times"></i></div> <!-- Botón de cerrar -->
                             </div>
-                        </div>
+                        </div>                                              
                         
                         <div class="header-burger-menu">
                             <div><img src="./icons/bars-icon.png" alt="bars"></div>
@@ -351,7 +352,24 @@
         document.querySelector('.header-search-button').addEventListener('click', function() {
             var input = document.querySelector('.search-input');
             input.classList.toggle('show'); // Alterna la visibilidad del campo de búsqueda
+            this.classList.toggle('active');  // Alterna el estilo activo del botón de búsqueda
+            
+            // Alterna la visibilidad del botón de cerrar
+            var exitButton = document.querySelector('.header-search-exit');
+            exitButton.classList.toggle('show');
         });
+
+        // Evento para el botón de cerrar
+        document.querySelector('.header-search-exit').addEventListener('click', function() {
+            var input = document.querySelector('.search-input');
+            input.classList.remove('show'); // Oculta el campo de búsqueda
+            this.classList.remove('show');  // Oculta el botón de cerrar
+            
+            // Remueve el estilo activo del botón de búsqueda
+            var searchButton = document.querySelector('.header-search-button');
+            searchButton.classList.remove('active');
+        });
+
     </script>
     
 </html>

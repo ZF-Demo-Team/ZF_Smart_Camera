@@ -96,16 +96,7 @@ span{
     display: flex;
     align-items: center;
 }
-.search-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    flex-grow: 1;
-    margin-right: 5px;
-    display: none; /* Starts hidden */
-}
-.search-input.show {
-    display: block;
-}
+
 .header-search-button {
     background-color: transparent;
     border: none;
@@ -125,6 +116,36 @@ span{
     width: 20px;
     height: 20px;
 }
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    margin-right: 5px;
+    display: none; /* Comienza oculto */
+}
+
+.header-search-button.active {
+    background-color: #0070B4;  /* Color azul claro */
+    color: #ffffff;             /* Color blanco para la lupa */
+}
+
+.header-search-exit {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    color: #1179bf;
+    display: none;  /* Empieza oculto */
+}
+
+.search-input.show {
+    display: block;
+}
+
+.search-input.show + .header-search-button + .header-search-exit {
+    display: block;
+}
+
 
 @media screen and (max-width: 992px){
     
@@ -196,8 +217,8 @@ span{
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255,255,255,0.2); /* Puedes ajustar el color y la opacidad como prefieras */
-    backdrop-filter: blur(3px); /* Este es el efecto de desenfoque */
+    /*background: rgba(255,255,255,0.2); /* Puedes ajustar el color y la opacidad como prefieras */
+    /*backdrop-filter: blur(3px); /* Este es el efecto de desenfoque */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,7 +252,7 @@ span{
     }
     #animation-container {
         width: 90vw;
-        height: 30vh;        
+        height: 300px;        
         height: auto; /* Ajusta la altura automáticamente */
     }
     .middle-animation {
@@ -249,7 +270,7 @@ span{
         text-align: center; /* Centra el texto */
     }
     #animation-container {
-        width: 90vw;
+        width: 85vw;
         height: 30vh;        
         height: auto; /* Ajusta la altura automáticamente */
     }
@@ -267,7 +288,7 @@ span{
 }
 
 h1 {
-    margin: 50px auto;
+    margin: 20px auto;
     text-align: center;
     font-size: 30px;
     max-width: 80%;
@@ -366,12 +387,13 @@ h1::after {
 }
 
 @media screen and (max-width: 992px){
-    .first-description{
+    .description{
         grid-template-columns: 100%;
     }
-    .first-description-right {
+    .description-right {
         text-align: center;
     }
+    
     .image-container img{
         width: 320px;
         padding-top: 30px;
@@ -386,7 +408,7 @@ h1::after {
     .description-right{
         text-align: center;
     }
-
+    
     .pcb-description {
         text-align: center;
     }
@@ -403,10 +425,15 @@ h1::after {
 }
 
 @media screen and (max-width: 992px){
-    
+    .pcb-description {
+        padding-left: 0px;
+        text-align: center;
+    }
 }
+   
 @media screen and (max-width: 450px){
     .pcb-description {
+        padding-left: 0px;
         text-align: center;
     }
 }

@@ -114,12 +114,12 @@ class App {
     
     setupOrbitCont(){
         // Restricciones de zoom
-        this.controls.minDistance = 0.1;    // Mínima distancia de zoom (por ejemplo, 5 unidades)
-        this.controls.maxDistance = 0.28;   // Máxima distancia de zoom (por ejemplo, 50 unidades)
+        this.controls.minDistance = 0.2;    // Mínima distancia de zoom 
+        this.controls.maxDistance = 0.28;   // Máxima distancia de zoom 
 
         // Restricciones verticales (para evitar que la cámara vaya completamente arriba o abajo)
-        this.controls.minPolarAngle = THREE.Math.degToRad(50); // Min angle (20 grados)
-        this.controls.maxPolarAngle = THREE.Math.degToRad(110); // Max angle (160 grados)
+        this.controls.minPolarAngle = THREE.Math.degToRad(50); // Min angle 
+        this.controls.maxPolarAngle = THREE.Math.degToRad(110); // Max angle 
 
         this.controls.update();
     }
@@ -271,21 +271,12 @@ class App {
         });
     }   
 
-    /*
-    resize(){
-        const container = document.getElementById('animation-container');
-        this.camera.aspect = window.innerWidth / window.innerHeight;
-        this.camera.updateProjectionMatrix();
-        this.renderer.setSize( window.innerWidth, window.innerHeight );  
-    }
-    */
     resize(){
         const container = document.getElementById('animation-container');
         this.camera.aspect = container.offsetWidth / container.offsetHeight;
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(container.offsetWidth, container.offsetHeight);
     }
-    
     
     /*
     pieces[0] -> case
