@@ -1,9 +1,9 @@
 import * as THREE from 'three';
-import { OrbitControls } from './libs/three140/examples/jsm/controls/OrbitControls.js';
-import { GLTFLoader } from './libs/three140/examples/jsm/loaders/GLTFLoader.js';
-import { DRACOLoader } from './libs/three140/examples/jsm/loaders/DRACOLoader.js';
-import { RGBELoader } from './libs/three140/examples/jsm/loaders/RGBELoader.js';
-import { LoadingGIF } from './libs/LoadingGIF.js';
+import { OrbitControls } from '../libs/three140/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from '../libs/three140/examples/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from '../libs/three140/examples/jsm/loaders/DRACOLoader.js';
+import { RGBELoader } from '../libs/three140/examples/jsm/loaders/RGBELoader.js';
+import { LoadingGIF } from '../libs/LoadingGIF.js';
 
 class App {
 	constructor(){
@@ -129,7 +129,7 @@ class App {
         const pmremGenerator = new THREE.PMREMGenerator( this.renderer );
         pmremGenerator.compileEquirectangularShader();
          
-        loader.load( './assets/hdr/venice_sunset_1k.hdr', ( texture ) => {
+        loader.load( '../assets/hdr/venice_sunset_1k.hdr', ( texture ) => {
           const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
           pmremGenerator.dispose();
 
@@ -167,9 +167,9 @@ class App {
     
     
     loadGLTF(){
-        const loader = new GLTFLoader().setPath('./assets/');
+        const loader = new GLTFLoader().setPath('../assets/');
         const dracoLoader = new DRACOLoader();
-        dracoLoader.setDecoderPath('./libs/three140/examples/js/libs/draco/');
+        dracoLoader.setDecoderPath('../libs/three140/examples/js/libs/draco/');
         loader.setDRACOLoader( dracoLoader);
 
         loader.load(
@@ -199,9 +199,9 @@ class App {
         )
     }
     loadGLTF2(){
-        const loader = new GLTFLoader().setPath('./assets/');
+        const loader = new GLTFLoader().setPath('../assets/');
         const dracoLoader = new DRACOLoader();
-        dracoLoader.setDecoderPath('./libs/three140/examples/js/libs/draco/');
+        dracoLoader.setDecoderPath('../libs/three140/examples/js/libs/draco/');
         loader.setDRACOLoader( dracoLoader);
         
 
