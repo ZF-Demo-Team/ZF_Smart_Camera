@@ -10,5 +10,5 @@ Take one smart camera ECU mount it into a fixture that shows all the components 
 - Application/webpage development
 
 
-(![image](https://github.com/ZF-Demo-Team/ZF_Smart_Camera/assets/83084197/79726228-6029-40eb-94c4-12d6f68a8cf5)
+![image](https://github.com/ZF-Demo-Team/ZF_Smart_Camera/assets/83084197/79726228-6029-40eb-94c4-12d6f68a8cf5)
 
