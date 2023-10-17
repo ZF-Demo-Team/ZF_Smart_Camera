@@ -1,7 +1,7 @@
 
 class LoadingGIF {
-    gifPath = "../images/ZF_pulse_animation_nb.gif"
-    constructor(gifPath="../images/ZF_pulse_animation_nb.gif") {
+    gifPath = "./images/ZF_pulse_animation_nb.gif"
+    constructor(gifPath="./images/ZF_pulse_animation_nb.gif") {
         // Crear un contenedor para el GIF
         this.domElement = document.createElement("div");
         this.domElement.style.position = 'fixed';
