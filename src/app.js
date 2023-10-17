@@ -167,7 +167,7 @@ class App {
     
     
     loadGLTF(){
-        const loader = new GLTFLoader().setPath('../assets/');
+        const loader = new GLTFLoader().setPath('./assets/');
         const dracoLoader = new DRACOLoader();
         dracoLoader.setDecoderPath('../libs/three140/examples/js/libs/draco/');
         loader.setDRACOLoader( dracoLoader);
@@ -199,7 +199,7 @@ class App {
         )
     }
     loadGLTF2(){
-        const loader = new GLTFLoader().setPath('../assets/');
+        const loader = new GLTFLoader().setPath('./assets/');
         const dracoLoader = new DRACOLoader();
         dracoLoader.setDecoderPath('../libs/three140/examples/js/libs/draco/');
         loader.setDRACOLoader( dracoLoader);
