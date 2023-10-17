@@ -8,5 +8,5 @@ Take one smart camera ECU mount it into a fixture that shows all the components 
 - Camera ECU (scrap)
 - Fixture development (3D printed or acrylic)
 - Application/webpage development
-![image](https://github.com/ZF-Demo-Team/ZF_Smart_Camera/assets/83084197/88d7e1b8-8c4e-43ae-830e-2ee7bc608fed)
+![image](![image](https://github.com/ZF-Demo-Team/ZF_Smart_Camera/assets/83084197/79726228-6029-40eb-94c4-12d6f68a8cf5)
 
