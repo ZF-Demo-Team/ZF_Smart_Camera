@@ -319,6 +319,31 @@ h1::after {
     z-index: -2;
 }
 
+/* COLUMNS */
+.column-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.column {
+    width: 25%; /* Ajusta el ancho de las columnas según sea necesario */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional, para dar un efecto de sombra */
+    text-align: center;
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .column-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
 
 
 /*Parts Description*/
